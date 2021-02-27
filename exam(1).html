@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <style>
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tips">请输入一组数字:</div>
+    <input type="text" class="question">
+    <button>求解</button>
+    <input type="text" class="answer">
+    <script>
+        // 1、获取元素
+        var question = document.querySelector('.question');
+        var btn = document.querySelector('button');
+        var answer = document.querySelector('.answer');
+        //2、绑定事件 处理过程
+        btn.onclick = function() {
+                answer.value = sort(question.value);
+            }
+            //选择排序
+        function sort(str) {
+            var num = str.split('');
+            for (var i = 0; i < num.length - 1; i++) {
+                var k = i;
+                for (var j = i + 1; j < num.length; j++) {
+                    if (num[k] > num[j]) {
+                        k = j;
+                    }
+                }
+                if (i != k) {
+                    var temp = num[i];
+                    num[i] = num[k];
+                    num[k] = temp;
+                }
+            }
+            return num.join(',');
+        }
+    </script>
+</body>
+
+</html>

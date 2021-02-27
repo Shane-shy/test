@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+/* 输入框部分开始 */
+
+.box {
+    position: relative;
+    /* border: 1px solid #000000; */
+    margin: 50px auto;
+    margin-bottom: 0px;
+    width: 500px;
+    height: 82px;
+}
+
+.box #text {
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    resize: none;
+    background-color: #f4f5f7;
+    border: 1px solid #ccc;
+    width: 417px;
+    height: 49px;
+}
+
+.box button {
+    position: absolute;
+    right: 0px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    width: 60px;
+    height: 60px;
+    background-color: #00a1d6;
+    font-size: 14px;
+    color: #fff;
+}
+
+.box button:hover {
+    background-color: #077ca3f6;
+}
+
+.box #text:hover {
+    background-color: #fff;
+}
+
+
+/* 输入框部分结束 */
+
+
+/* 留言板部分开始 */
+
+.comment {
+    overflow: auto;
+    /* 溢出隐藏或者滚动，要加在父级元素上 */
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 500px;
+}
+
+ul li {
+    margin: 5px 10px 0 10px;
+    list-style: none;
+    font: 400 14px 'Microsoft yahei';
+}
+
+
+/* 留言板部分结束 */

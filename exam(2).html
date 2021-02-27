@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam(2)</title>
+    <link rel="stylesheet" href="exam(2).css">
+</head>
+
+<body>
+    <!-- 输入框部分开始 -->
+    <div class="box">
+        <textarea name="" id="text" cols="80" rows="5" placeholder="发条友善的评论"></textarea>
+        <button>发表评论</button>
+    </div>
+    <!-- 输入框部分结束 -->
+
+    <!-- 留言板部分开始 -->
+    <div class="comment">
+        <ul>
+
+        </ul>
+    </div>
+    <!-- 留言板部分结束 -->
+    <script>
+        // 1、获取元素
+        var btn = document.querySelector('button');
+        var text = btn.previousElementSibling;
+        var ul = document.querySelector('ul');
+        //2、注册事件
+        btn.onclick = function() {
+            var li = document.createElement('li');
+            if (text.value == '') {
+                alert('请输入文字。');
+                return false;
+            } else {
+                li.innerHTML = text.value;
+                ul.insertBefore(li, ul.children[0]);
+                text.value = '';
+            }
+
+        }
+    </script>
+</body>
+
+</html>
